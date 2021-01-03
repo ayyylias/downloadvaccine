@@ -364,7 +364,16 @@ p {
 			    By clicking on the DOWNLOAD button below, the newest version of our vaccine will be applied to your computer.<br>
 			    To keep your computer healthy, it is recommend to vaccinate it at least once every 6 months.<br>
 			    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Read more.</a><br>
-				9.9/10 Computer Doctors recommend.<br>
+				<span id='done'></span> People have vaccinated their computer today!<br>
+				<script> 
+// https://stackoverflow.com/questions/41946457/getting-text-from-fetch-response-object whatever lol
+					fetch('views.html')
+       .then(response => response.text())
+	        .then((response) => {
+		document.querySelector('#done').innerHTML = response;
+        })
+
+				</script>
 			</p>
 			<a id="btn" href="/download.html" style=" padding: 25px 15px;">
 				DOWNLOAD
